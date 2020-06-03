@@ -2,11 +2,11 @@ public class Gameboard {
     private int door1;
     private int door2;
     private int door3;
-    final int random = (int) ( Math.random() * 3 + 1 );
+    final int carIndex = (int) ( Math.random() * 3 + 1 );
 
     public Gameboard( ) {
         //System.out.println("the car is behind door"+ random);
-        switch (random) {
+        switch (carIndex) {
             case 1:
                 door1 = 1;
                 door2 = 0;
@@ -26,7 +26,7 @@ public class Gameboard {
     }
 
     public int reveal(int guess) {
-        switch (random) {
+        switch (carIndex) {
             case 1:
                 if (guess == 1 || guess == 2) {
                    // System.out.println("there is a goat behind door 3");
@@ -56,7 +56,7 @@ public class Gameboard {
                 }
 
             default:
-                throw new IllegalStateException("Unexpected value: " + random);
+                throw new IllegalStateException("Unexpected value: " + carIndex);
         }
     }
 
