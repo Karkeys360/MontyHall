@@ -29,16 +29,15 @@ public class Gameboard {
         switch (carIndex) {
             case 1:
                 if (guess == 1 || guess == 2) {
-                   // System.out.println("there is a goat behind door 3");
+                    // System.out.println("there is a goat behind door 3");
                     return 3;
-                }
-                else {
-                   // System.out.println("there is a goat behind door 2");
+                } else {
+                    // System.out.println("there is a goat behind door 2");
                     return 2;
                 }
             case 2:
                 if (guess == 1 || guess == 2) {
-                   // System.out.println("there is a goat behind door 3");
+                    // System.out.println("there is a goat behind door 3");
                     return 3;
                 } else {
                     //System.out.println("there is a goat behind door 1");
@@ -56,7 +55,7 @@ public class Gameboard {
                 }
 
             default:
-                throw new IllegalStateException("Unexpected value: " + carIndex);
+                throw new IllegalArgumentException("Unexpected value: " + carIndex);
         }
     }
 
